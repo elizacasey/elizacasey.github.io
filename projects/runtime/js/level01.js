@@ -29,11 +29,6 @@ var level01 = function (window) {
                 {type: 'reward', x:676,y:groundY-65},
                 {type: 'reward', x:1500,y:groundY-65},
             ]
-            
-            
-            
-            
-            
            
             
         };
@@ -131,7 +126,7 @@ var level01 = function (window) {
 
         }
         
-    function createReward(x,y) {
+        function createReward(x,y) {
             var reward = game.createGameItem("reward", 17);
             reward.x = x;
             reward.y = y;
@@ -145,15 +140,17 @@ var level01 = function (window) {
     
             reward.addChild(blueSquare); 
     
-            reward.addGameItem(reward);
+            game.addGameItem(reward);
             
             reward.onPlayerCollision = function () {
                 game.changeIntegrity(25);
                 reward.fadeOut();
             };
+        }
+          
         // DO NOT EDIT CODE BELOW HERE
     }
-};
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
